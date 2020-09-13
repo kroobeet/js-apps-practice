@@ -50,6 +50,7 @@ input {
 input:hover {
 	color: #6B757D;
 	background: #B19E99;
+	cursor: pointer;
 }
 
 h5 {
