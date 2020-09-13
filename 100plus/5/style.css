@@ -1,0 +1,69 @@
+body {
+	margin: 0;
+	display: flex;
+	min-height: 100vh;
+	background: url("./img/mainBcg.jpeg") center/cover fixed no-repeat;
+	justify-content: center;
+	align-items: center;
+}
+
+* {
+	font-family: "Arial", sans-serif;
+}
+
+h2 {
+	color: white;
+	font-weight: bold;
+	font-size: 2.5rem;
+}
+
+#counter {
+	display: flex;
+	width: 50%;
+	border: 1px solid white;
+	padding: 50px;
+	flex-direction: column;
+	align-items: center;
+	font-weight: bold;
+	box-shadow: 5px 10px 10px 5px #333333;
+	border-radius: 5px;
+	transition: 0.5s;
+}
+
+#counter:hover {
+	box-shadow: 2px 5px 5px 2px #333333;
+	transition: 0.5s;
+}
+
+.btn {
+	border: 0;
+	border-radius: 5px;
+	background: #002D53;
+	color: white;
+	font-size: 1.1rem;
+	padding: 15px;
+	box-shadow: 2px 5px 5px 2px #333333;
+	transition: 0.3s;
+}
+
+.btn:hover {
+	background: #00A6EB;
+	cursor: pointer;
+	box-shadow: 1px 3px 3px 1px #333333;
+	transition: 0.3s;
+}
+
+#add {
+	margin-left: 100px;
+}
+
+#result {
+	color: #333333;
+	font-size: 10rem;
+}
+
+#btnBlock {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
