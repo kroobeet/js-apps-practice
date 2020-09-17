@@ -8,7 +8,7 @@ var bgArray = [
 	'url("./img/5.jpg") center/cover fixed no-repeat'
 ];
 
-function left() {
+function left () {
 	bgItem--;
 	if (bgItem < 0) {
 		bgItem = (bgArray.length-1);
@@ -18,7 +18,7 @@ function left() {
 	}
 }
 
-function right() {
+function right () {
 	bgItem++;
 	if (bgItem == bgArray.length) {
 		bgItem = 0;
