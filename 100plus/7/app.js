@@ -26,22 +26,31 @@ var testimonialObj = {
 		Testimonial: 'Dolorem dicta deserunt voluptas earum itaque corrupti accusantium quos aut molestiae reiciendis, sed suscipit impedit saepe laboriosam beatae eveniet rem, commodi, molestias!'
 	}
 };
-// переменная равно ноль, потому что изначально у нас будет текст по умолчанию 
+// переменная objItem равна ноль, потому что изначально у нас будет текст по умолчанию 
 var objItem = 0;
-// функция переключение отзывов
-var buttons = document.querySelector('#buttons').addEventListener('click', function(event) {
-	var id = event.target.id;
-	if (id == 'prev') {
-		objItem--;
-	} else if (id == 'next') {
-		objItem++;
-	} else {
-		return false;
+
+// 2: функция получения элементов
+function getValues() {
+	var customerPhoto = document.querySelector('#customer-photo');
+	var customerName = document.querySelector('#customer-name');
+	var customerTestimonial = document.querySelector('#testimonial');
+
+	// 3: функция установки значений в элементы
+	function setValues() {
+		var photo = testimonialObj[objItem].Photo;
+		var name = testimonialObj[objItem].Name;
+		var testimonial = testimonialObj[objItem].Testimonial;
+		customerPhoto.setAttribute('src', photo);
+		customerName.innerHTML = name;
+		customerTestimonial.innerHTML = testimonial;
 	}
-	checkPosition();
-	getValues();
-});
-// функция проверки позиции отзыва
+	// 4: вернём функцию установки значений в элементы
+	// когда обратимся к функции getValues() - она дополнительно вернёт setValues()
+	// чтобы значения были установлены
+	return setValues();
+}
+
+// 5: функция проверки позиции отзыва
 function checkPosition() {
 	var keys = Object.keys(testimonialObj);
 	if (objItem < 1) {
@@ -51,19 +60,23 @@ function checkPosition() {
 	}
 	return objItem;
 }
-// получение и установка значений
-function getValues() {
-	var customerPhoto = document.querySelector('#customer-photo');
-	var customerName = document.querySelector('#customer-name');
-	var customerTestimonial = document.querySelector('#testimonial');
 
-	function setValues() {
-		var photo = testimonialObj[objItem].Photo;
-		var name = testimonialObj[objItem].Name;
-		var testimonial = testimonialObj[objItem].Testimonial;
-		customerPhoto.setAttribute('src', photo);
-		customerName.innerHTML = name;
-		customerTestimonial.innerHTML = testimonial;
+// 6: реализация события click
+// Узнаём на какой кнопке (prev или next) произошло событие click
+// и выполняем соответствующие инструкции
+var buttons = document.querySelector('#buttons').addEventListener('click', function(event) {
+	var id = event.target.id;
+	if (id == 'prev') {
+		objItem--;
+	} else if (id == 'next') {
+		objItem++;
+	} else {
+		/*
+		если не установить return false, то операция переключения отзывов будет работать
+		даже если кликнуть вне кнопки (prev или next)
+		*/
+		return false;
 	}
-	return setValues();
-}
+	checkPosition();
+	getValues();
+});
