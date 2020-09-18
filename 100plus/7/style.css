@@ -1,58 +1,17 @@
-body {
-	margin: 0;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	align-items: center;
-	justify-content: center;
-	background-color: #929292;
-	background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("./img/questionBcg.jpeg") center/cover fixed no-repeat;
-}
-
 * {
 	padding: 0;
 	margin: 0;
 	font-family: "Arial", sans-serif;
 }
 
-#wrapper {
-	display: flex;
-	width: 100%;
-	align-items: center;
-	justify-content: center;
-}
-
-.header-info {
-	display: flex;
-	flex-direction: column;
-	width: 50%;
-	align-items: center;
-	margin-bottom: 10vh;
-}
-
-.header-info span {
-	color: #FF5A00;
-	font-size: 2rem;
-}
-
-.customer-card {
-	display: flex;
-	flex-direction: column;
-	width: 50%;
-	align-items: center;
-	height: auto;
-	border: 1px solid white;
-	border-radius: 2%;
-}
-
-#customer-name {
-	text-transform: uppercase;
+/***********TAGS STYLE**********/
+body {
+	min-height: 100vh;
+	background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("./img/questionBcg.jpeg") center/cover fixed no-repeat;
 }
 
 a {
-	display: flex;
-	color: #FF5A00;
-	border: 1px solid #FF5A00;
+	border: 1px solid #DD540A;
 	border-radius: 50%;
 	padding: 20px;
 	text-decoration: none;
@@ -61,28 +20,13 @@ a {
 }
 
 a:hover {
-	background-color: #FF5A00;
-	color: white;
+	background-color: #DD540A;
 	transition: 1s;
-}
-
-img {
-	display: flex;
-	width: 10rem;
-	border-radius: 50%;
-	margin-bottom: 2rem;
-	margin-top: -3rem;
 }
 
 h1, h3, p{
 	text-align: center;
-	width: 100%;
-	color: white;
 	width: 90%;
-}
-
-#client {
-	font-size: 1.5rem;
 }
 
 h3 {
@@ -92,23 +36,77 @@ h3 {
 p {
 	font-size: 1rem;
 	z-index: 2;
+	line-height: 1.5rem;
+}
+
+img {
+	width: 10rem;
+	border-radius: 50%;
+	margin-bottom: 2rem;
+	margin-top: -3rem;
+}
+/*********************************/
+
+/**********CLASS STYLES***********/
+.flex {
+	display: flex;
+}
+
+.clr {
+	color: #DD540A;
+}
+
+.clr-2 {
+	color: white;
+}
+
+.col {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.header-info {
+	width: 50%;
+	margin-bottom: 10vh;
+}
+
+.customer-card {
+	width: 50%;
+	height: auto;
+	border: 1px solid white;
+	border-radius: 1%;
+}
+
+.quote-icon {
+	margin: 50px 0 30px 0;
+	font-size: 2rem;
+}
+
+.star-icon {
+	margin: 20px 0;
+	font-size: 1.3rem;
+}
+/************************************/
+
+
+/*************IDs Styles**************/
+#wrapper {
+	width: 100%;
+}
+
+#customer-name {
+	text-transform: uppercase;
+}
+
+#client {
+	font-size: 1.5rem;
 }
 
 #buttons {
 	position: absolute;
-	display: flex;
 	width: 100%;
 	flex-direction: row;
 	justify-content: space-around;
 }
-
-.quote-icon {
-	color: #FF5A00;
-	margin-top: 50px;
-	font-size: 2.5rem;
-}
-
-.star-icon {
-	color: #FF5A00;
-	margin: 20px 0;
-}
+/***************************************/
