@@ -1,3 +1,4 @@
+//1: создадим этот объект с объектами
 var testimonialObj = { 
 	1: {
 		Photo: './img/customer-1.jpg',
@@ -25,9 +26,9 @@ var testimonialObj = {
 		Testimonial: 'Dolorem dicta deserunt voluptas earum itaque corrupti accusantium quos aut molestiae reiciendis, sed suscipit impedit saepe laboriosam beatae eveniet rem, commodi, molestias!'
 	}
 };
-
+// переменная равно ноль, потому что изначально у нас будет текст по умолчанию 
 var objItem = 0;
-
+// функция переключение отзывов
 var buttons = document.querySelector('#buttons').addEventListener('click', function(event) {
 	var id = event.target.id;
 	if (id == 'prev') {
@@ -40,7 +41,7 @@ var buttons = document.querySelector('#buttons').addEventListener('click', funct
 	checkPosition();
 	getValues();
 });
-
+// функция проверки позиции отзыва
 function checkPosition() {
 	var keys = Object.keys(testimonialObj);
 	if (objItem < 1) {
@@ -50,15 +51,19 @@ function checkPosition() {
 	}
 	return objItem;
 }
-
+// получение и установка значений
 function getValues() {
 	var customerPhoto = document.querySelector('#customer-photo');
 	var customerName = document.querySelector('#customer-name');
 	var customerTestimonial = document.querySelector('#testimonial');
-	var photo = testimonialObj[objItem].Photo;
-	var name = testimonialObj[objItem].Name;
-	var testimonial = testimonialObj[objItem].Testimonial;
-	customerPhoto.setAttribute('src', photo);
-	customerName.innerHTML = name;
-	customerTestimonial.innerHTML = testimonial;
+
+	function setValues() {
+		var photo = testimonialObj[objItem].Photo;
+		var name = testimonialObj[objItem].Name;
+		var testimonial = testimonialObj[objItem].Testimonial;
+		customerPhoto.setAttribute('src', photo);
+		customerName.innerHTML = name;
+		customerTestimonial.innerHTML = testimonial;
+	}
+	return setValues();
 }
