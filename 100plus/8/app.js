@@ -33,7 +33,7 @@ var products = {
 			Price: 5
 		}
 	},
-	'Sweet': {
+	'Sweets': {
 		1: {
 			Photo: './img/sweets-1.jpeg',
 			Name: 'Sweet Item',
@@ -67,6 +67,37 @@ var products = {
 			Price: 15
 		}
 	}
+}
+
+var storeNav = document.querySelector('#store-nav').addEventListener('click', function (event) {
+	var id = event.target.id;
+	alert(id);
+	if (id != 'store-nav') {
+		showProducts(getLen(id));
+	} else {
+		return false;
+	}
+})
+
+var getLen = function(id) {
+	var arr = Object.keys(products);
+	var arrProducts = products;
+	console.log(id);
+	var elem = 0;
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] == id) {
+			for (let i = 1; arrProducts[id][i] !== undefined; i++) {
+				elem++;
+			}
+			return elem;
+		} else {
+			continue;
+		}
+	}
+}
+
+function showProducts(len) {
+	
 }
 
 var border = document.querySelector('#border');
