@@ -39,8 +39,8 @@
 				<a href="#about" class="btn-2" name="about">Explore</a>
 			</div>
 			<div id="image">
+				<img src="./img/sweets-1.jpeg" id="main-image">
 				<div id="border"></div>
-				<img src="./img/sweets-1.jpeg" onmousemove="move()" onmouseout="out()">
 			</div>
 		</div>
 		<div id="store" name="store">
@@ -60,96 +60,151 @@
 					<input type="text" class="form-control" placeholder="item..." id="search-item">
 				</div>
 			</div>
-			<div id="store-items">
-				<div class="store-item">
+			<div id="store-items" data-category="All">
+				<div class="store-item" data-category="Sweets">
 					<div class="img-container">
-						<img src="./img/sweets-1.jpeg" alt="" class="image-item" id="ddd">
+						<img src="./img/sweets-1.jpeg" alt="" class="store-img" id="ddd">
 						<span class="store-item-icon">
                 			<i class="fa fa-shopping-cart"></i>
               			</span>
 					</div>
 					<div class="store-item-info">
-						<span class="name-item">Sweet Item</span>
-						<span class="price-item">$5</span>
+						<span class="name-item" data-name="Sweet Item"></span>
+						<span class="price-item" data-price="$5"></span>
 					</div>
 				</div>
-				<div class="store-item">
-					<img src="./img/cupcake-1.jpeg" alt="" class="image-item">
+				<div class="store-item" data-category="Cupcakes">
+					<div class="img-container">
+						<img src="./img/cupcake-1.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+              		</div>
 					<div class="store-item-info">
-						<span class="name-item">Cupcake Item</span>
-						<span class="price-item">$5</span>
+						<span class="name-item" data-name="Cupcake Item"></span>
+						<span class="price-item" data-price="$5"></span>
 					</div>
 				</div>
-				<div class="store-item">
-					<img src="./img/cake-1.jpeg" alt="" class="image-item">
-					<div class="store-item-info">
-						<span class="name-item">Cake Item</span>
-						<span class="price-item">$5</span>
+				<div class="store-item" data-category="Cakes">
+					<div class="img-container">
+						<img src="./img/cake-1.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
 					</div>
-				</div>
-
-				<div class="store-item">
-					<img src="./img/doughnut-1.jpeg" alt="" class="image-item">
 					<div class="store-item-info">
-						<span class="name-item">Dougnut Item</span>
-						<span class="price-item">$5</span>
-					</div>
-				</div>
-				<div class="store-item">
-					<img src="./img/sweets-2.jpeg" alt="" class="image-item">
-					<div class="store-item-info">
-						<span class="name-item">Sweet Item</span>
-						<span class="price-item">$10</span>
-					</div>
-				</div>
-				<div class="store-item">
-					<img src="./img/cupcake-2.jpeg" alt="" class="image-item">
-					<div class="store-item-info">
-						<span class="name-item">Cupcake Item</span>
-						<span class="price-item">$10</span>
+						<span class="name-item" data-name="Cake Item"></span>
+						<span class="price-item"data-price="$5"></span>
 					</div>
 				</div>
 
-				<div class="store-item">
-					<img src="./img/cake-2.jpeg" alt="" class="image-item">
+				<div class="store-item" data-category="Doughnuts">
+					<div class="img-container">
+						<img src="./img/doughnut-1.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+					</div>
 					<div class="store-item-info">
-						<span class="name-item">Cake Item</span>
-						<span class="price-item">$10</span>
+						<span class="name-item" data-name="Dougnut Item"></span>
+						<span class="price-item" data-price="$5"></span>
 					</div>
 				</div>
-				<div class="store-item">
-					<img src="./img/doughnut-2.jpeg" alt="" class="image-item">
+				<div class="store-item" data-category="Sweets">
+					<div class="img-container">
+					<img src="./img/sweets-2.jpeg" alt="" class="store-img">
+					<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+					</div>
 					<div class="store-item-info">
-						<span class="name-item">Dougnut Item</span>
-						<span class="price-item">$10</span>
+						<span class="name-item" data-name="Sweet Item"></span>
+						<span class="price-item" data-price="$10"></span>
 					</div>
 				</div>
-				<div class="store-item">
-					<img src="./img/sweets-3.jpeg" alt="" class="image-item">
+				<div class="store-item" data-category="Cupcakes">
+					<div class="img-container">
+						<img src="./img/cupcake-2.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+					</div>
 					<div class="store-item-info">
-						<span class="name-item">Sweet Item</span>
-						<span class="price-item">$15</span>
+						<span class="name-item" data-name="Cupcake Item"></span>
+						<span class="price-item" data-price="$5"></span>
 					</div>
 				</div>
-				<div class="store-item">
-					<img src="./img/cupcake-3.jpeg" alt="" class="image-item">
+
+				<div class="store-item" data-category="Cakes">
+					<div class="img-container">
+						<img src="./img/cake-2.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+					</div>
 					<div class="store-item-info">
-						<span class="name-item">Cupcake Item</span>
-						<span class="price-item">$15</span>
+						<span class="name-item" data-name="Cake Item"></span>
+						<span class="price-item" data-price="$10"></span>
 					</div>
 				</div>
-				<div class="store-item">
-					<img src="./img/cake-3.jpeg" alt="" class="image-item">
+				<div class="store-item" data-category="Doughnuts">
+					<div class="img-container">
+						<img src="./img/doughnut-2.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+					</div>
 					<div class="store-item-info">
-						<span class="name-item">Cake Item</span>
-						<span class="price-item">$10</span>
+						<span class="name-item" data-name="Dougnut Item"></span>
+						<span class="price-item" data-price="$10"></span>
 					</div>
 				</div>
-				<div class="store-item">
-					<img src="./img/doughnut-3.jpeg" alt="" class="image-item">
+				<div class="store-item" data-category="Sweets">
+					<div class="img-container">
+						<img src="./img/sweets-3.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+					</div>
 					<div class="store-item-info">
-						<span class="name-item">Dougnut Item</span>
-						<span class="price-item">$15</span>
+						<span class="name-item" data-name="Sweet Item"></span>
+						<span class="price-item"data-price="$15"></span>
+					</div>
+				</div>
+				<div class="store-item" data-category="Cupcakes">
+					<div class="img-container">
+						<img src="./img/cupcake-3.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+					</div>
+					<div class="store-item-info">
+						<span class="name-item" data-name="Cupcake Item"></span>
+						<span class="price-item" data-price="$15"></span>
+					</div>
+				</div>
+				<div class="store-item" data-category="Cakes">
+					<div class="img-container">
+						<img src="./img/cake-3.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+					</div>
+					<div class="store-item-info">
+						<span class="name-item" data-name="Cake Item"></span>
+						<span class="price-item" data-price="$15"></span>
+					</div>
+				</div>
+				<div class="store-item" data-category="Doughnuts">
+					<div class="img-container">
+						<img src="./img/doughnut-3.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+              		</div>
+					<div class="store-item-info">
+						<span class="name-item" data-name="Dougnut Item"></span>
+						<span class="price-item" data-price="$15"></span>
 					</div>
 				</div>
 			</div>
