@@ -1,4 +1,4 @@
-/*var border = document.querySelector('#border');
+var border = document.querySelector('#border');
 var image = document.querySelector('#main-image');
 image.onmousemove = move;
 image.onmouseout = out;
@@ -11,7 +11,7 @@ function out() {
 	border.style.marginLeft = '-55px';
 	border.style.marginTop = '-55px';
 }
-*/
+
 var names = document.querySelectorAll('.name-item');
 var prices = document.querySelectorAll('.price-item');
 

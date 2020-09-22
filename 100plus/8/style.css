@@ -288,11 +288,6 @@ nav>a:hover{
 	overflow: hidden;
 }
 
-#main-image:hover #border {
-	margin-left: -10px;
-	margin-top: 0px;
-}
-
 .img-container:hover .store-item-icon{
 	transform: translate(0%, 0%);
 }
