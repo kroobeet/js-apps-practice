@@ -20,17 +20,25 @@ for (let i = 0; i < names.length; i++) {
 	prices[i].innerHTML = prices[i].dataset.price;
 }
 
-var btnFilterClick = document.querySelector('#store-nav').addEventListener('click', function (event) {
+function getId () {
 	var id = event.target.id;
 	if (id != 'store-nav') {
 		return showItems(id);
 	} else {
 		return false;
 	}
+}
+
+var btnFilterClick = document.querySelector('#store-nav').addEventListener('click', function (event) {
+	getId();
 });
 
 function showItems(id) {
-	var products = document.querySelectorAll('.store-item');
+	var products = getProducts();
+	changeStyle(products,id);
+}
+
+function changeStyle (products,id) {
 	for (let i = 0; i < products.length; i++) {
 		if (id == 'All') {
 			products[i].style.display = 'flex';
@@ -40,4 +48,9 @@ function showItems(id) {
 			products[i].style.display = 'flex';
 		}
 	}
+}
+
+function getProducts() {
+	var products = document.querySelectorAll('.store-item');
+	return products;
 }
