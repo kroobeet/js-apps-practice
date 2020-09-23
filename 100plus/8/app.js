@@ -15,10 +15,27 @@ function out() {
 var names = document.querySelectorAll('.name-item');
 var prices = document.querySelectorAll('.price-item');
 
-for (let i = 0; i < names.length; i++) {
+for (var i = 0; i < names.length; i++) {
 	names[i].innerHTML = names[i].dataset.name;
 	prices[i].innerHTML = prices[i].dataset.price;
 }
+
+// фильтр по поиску (start)
+var searchItem = document.querySelector('#search-item');
+var changesInput = document.querySelector('#search-item').addEventListener('keyup', function () {
+	var inputValue = searchItem.value;
+	var products = getProducts();
+	for (var i = 0; i < names.length; i++) {
+		var name = names[i].dataset.name;
+		if (name.toLowerCase().includes(inputValue.toLowerCase())) {
+			products[i].style.display = 'flex';
+		} else {
+			products[i].style.display = 'none';
+		}
+	}
+});
+// фильтр по поиску (end)
+
 
 function getId () {
 	var id = event.target.id;
@@ -39,7 +56,7 @@ function showItems(id) {
 }
 
 function changeStyle (products,id) {
-	for (let i = 0; i < products.length; i++) {
+	for (var i = 0; i < products.length; i++) {
 		if (id == 'All') {
 			products[i].style.display = 'flex';
 		} else if (products[i].dataset.category != id) {
