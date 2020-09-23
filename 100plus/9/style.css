@@ -1,0 +1,407 @@
+@font-face {
+	font-family: 'KSR';
+	src: url('./fonts/KaushanScript-Regular.ttf');
+}
+
+* {
+	font-family: 'KSR';
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	display: flex;
+	background: linear-gradient(rgba(235, 205, 96, 0.4),rgba(235, 205, 96, 0.4)), url('./img/headerBcg.jpeg') center/cover fixed no-repeat;
+}
+
+a {
+	text-decoration: none;
+}
+
+.clr-1 {
+	color: #ef7998;
+}
+
+.clr-2 {
+	color: black;
+}
+
+.clr-3 {
+	color: white;
+}
+
+.btn-1 {
+	text-align: center;
+	border: 1px solid black;
+	padding: 10px;
+	transition: 0.1s;
+	border-radius: 5px;
+}
+
+.btn-1:hover {
+	color: white;
+	background-color: #ef7998;
+	border-color: #ef7998;
+	transition: 0.1s;
+}
+
+.fa-shopping-cart, .fa-phone {
+	margin-right: 10px;
+}
+
+.btn-2, .btn-3 {
+	text-align: center;
+	border-radius: 5px;
+	padding: 10px 20px;
+	color: black;
+	margin-top: 20px;
+	transition: 0.6s;
+	text-transform: uppercase;
+}
+
+.btn-2 {
+	border: 3px solid black;
+}
+
+.btn-3 {
+	border: 1px solid black;
+}
+
+#welcome > .btn-2 {
+	font-size: 1.5rem;
+	width: 100px;
+}
+
+.btn-2:hover, .btn-3:hover {
+	color: #ef7998;
+	background-color: black;
+	transition: 0.6s;
+}
+
+#wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+header {
+	background-color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+	padding: 20px 0;
+}
+
+nav {
+	display: flex;
+	width: 15%;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+nav>a {
+	font-size: 1.5rem;
+	transition: 0.6s;
+}
+
+nav>a:hover{
+	color: black;
+	transition: 0.6s;
+}
+
+#info {
+	display: flex;
+	flex-direction: row;
+	width: 25%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+#welcome {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 80vh;
+	color: white;
+	font-size: 2rem;
+}
+
+.big-pink {
+	color: #ef7998;
+	font-size: 5rem;
+	font-weight: bold;
+}
+
+
+#about-us-block {
+	display: flex;
+	flex-direction: row;
+	background-color: white;
+	width: 100%;
+	min-height: auto;
+	justify-content: space-around;
+	padding: 5% 0;
+}
+
+#about {
+	width: 40%;
+}
+
+#image {
+	display: flex;
+	align-items: center;
+	width: 40%;
+}
+
+#border {
+	width: 540px;
+	min-height: 405px;
+	margin-top: -50px;
+	margin-left: -50px;
+	border: 10px solid rgba(231,166,26,1);
+	z-index: 1; 
+	position: absolute;
+	transition: 1.5s;
+	opacity: 0.5;
+}
+
+#image > img {
+	width: 540px;
+    z-index: 2;
+}
+
+#about {
+	display: flex;
+	width: 40%;
+	flex-direction: column;
+}
+
+#about > p {
+	font-size: 1rem;
+	color: gray;
+}
+
+#about > .btn-2 {
+	font-size: 1rem;
+	width: 100px;
+}
+
+.header-text {
+	font-size: 3rem;
+}
+
+#store {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	background-color: #E7E7E7;
+}
+
+#store-nav {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	margin-bottom: 50px;
+}
+
+.btn-3:not(first-child) {
+	margin-left: 50px;
+}
+
+.input-group {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.input-group > div {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 40%;
+}
+
+.search-box {
+	background-color: #ef7998;
+	font-size: 2rem;
+	padding: 0 20px;
+	height: 100%;
+}
+
+.form-control {
+	font-size: 1.5rem;
+	width: 100%;
+	padding: 5px 5px 5px 20px;
+	border: 1px solid gray;
+	margin-bottom: 50px;
+}
+
+.form-control:focus {
+	outline: 3px solid rgba(239, 121, 152, 0.5);
+}
+
+/* Store Items */
+#store-items {
+	display: flex;
+	flex-direction: row;
+	width: 80%;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    cursor: pointer;
+}
+
+.store-item {
+	display: flex;
+	width: 30%;
+	flex-direction: column;
+	margin-bottom: 50px;
+	overflow: hidden;
+}
+
+.store-img {
+	width: 100%;
+	transition: 1s;
+	z-index: 1;
+	border-radius: 15px 15px 0 0;
+}
+
+.store-img:hover {
+	transition: 1s;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.img-container:hover .store-item-icon{
+	transform: translate(0%, 0%);
+}
+
+.img-container:hover .store-img {
+	transform: scale(1.2);
+}
+
+.store-item-icon:hover {
+	color: white;
+}
+
+.store-item-info {
+	background-color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 1.4rem;
+	padding: 20px;
+	overflow: hidden;
+	z-index: 2;
+}
+
+.store-item-icon {
+	display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.75rem;
+    background: rgba(231,166,26,1);
+    border-top-left-radius: 1rem;
+    transition: all 1s ease-in-out;
+    transform: translate(100%, 100%);
+}
+
+.fa-shopping-cart:before {
+    content: "\f07a";
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+#container {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#modal-bg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.6) !important;
+}
+
+#modal-close {
+	position: absolute;
+	top: 0;
+	right: 10%;
+    color: #ef7998;
+    font-size: 3rem;
+    transition: all 1s ease-in-out;
+	cursor: pointer;
+}
+
+#modal-close:hover {
+	color: rgb(243, 167, 167);
+}
+
+#modal-item {
+	width: 80%;
+	min-height: 80vh;
+	border-radius: 0.3rem;
+}
+
+#btnLeft {
+    top: 50%;
+    left: 5%;
+    transform: translateX(-60%);
+}
+
+#btnRight {
+    top: 50%;
+    right: 5%;
+    transform: translateX(60%);
+}
+
+.modal-control {
+    position: absolute;
+    font-size: 4rem;
+    color: #ef7998;
+    transition: all 1s linear;
+	cursor: pointer;
+}
+
+.modal-control i {
+	transition: 1s;
+}
+
+.modal-control i:hover {
+	color: rgb(243, 167, 167);
+	transition: 1s;
+}

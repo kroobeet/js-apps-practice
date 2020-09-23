@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<title>Filter-Project</title>
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<div id="logo" class="margin-header"><a href="#"><img src="img/logo.svg" alt=""></a></div>
+			<nav>
+				<a href="#" class="clr-1">Home</a>
+				<a href="#about" class="clr-1">About</a>
+				<a href="#store" class="clr-1">Store</a>
+			</nav>
+			<div id="info">
+				<a href="#" class="clr-2"><i class="fa fa-phone"></i>+123 456 789</a>
+				<a href="#" class="clr-2 btn-1">
+					<i class="fa fa-shopping-cart"></i>
+					<span id="item-count">2</span> 
+					<span>Items - $</span>
+					<span id="item-total">10.49</span>
+				</a>
+			</div>
+		</header>
+		<div id="welcome">
+			<span>Weclome To <span class="big-pink">Grandma's</span></span>
+			<a href="#store" class="btn-2">Explore</a>
+		</div>
+		<div id="about-us-block">
+			<div id="about">
+				<span class="header-text">About <span class="big-pink">Us</span></span>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aliquam voluptas beatae vitae expedita consectetur nesciunt quia deserunt asperiores facere fuga dicta fugiat corrupti et omnis porro at dolorum! Ad!
+				</p>
+				<a href="#about" class="btn-2" name="about">Explore</a>
+			</div>
+			<div id="image">
+				<img src="./img/sweets-1.jpeg" id="main-image">
+				<div id="border"></div>
+			</div>
+		</div>
+		<div id="store" name="store">
+			<div id="store-top">
+				<span class="header-text">Our <span class="big-pink">Store</span></span>
+			</div>
+			<div id="store-nav" class="storeNav">
+				<a href="#search" class="btn-3" id="All">all</a>
+				<a href="#search" class="btn-3" id="Cakes">cakes</a>
+				<a href="#search" class="btn-3" id="Cupcakes">cupcakes</a>
+				<a href="#search" class="btn-3" id="Sweets">sweets</a>
+				<a href="#search" class="btn-3" id="Doughnuts">doughnuts</a>
+			</div>
+			<div class="input-group">
+				<div>
+					<span class="search-box" id="search-icon"><i class="fa fa-search" name="search"></i></span>
+					<input type="text" class="form-control" placeholder="item..." id="search-item">
+				</div>
+			</div>
+			<div id="store-items" data-category="All">
+				<div class="store-item" data-category="Sweets">
+					<div class="img-container">
+						<img src="./img/sweets-1.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+					</div>
+					<div class="store-item-info">
+						<span class="name-item" data-name="Sweet Item"></span>
+						<span class="price-item" data-price="$5"></span>
+					</div>
+				</div>
+				<div class="store-item" data-category="Cupcakes">
+					<div class="img-container">
+						<img src="./img/cupcake-1.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+              		</div>
+					<div class="store-item-info">
+						<span class="name-item" data-name="Cupcake Item"></span>
+						<span class="price-item" data-price="$5"></span>
+					</div>
+				</div>
+				<div class="store-item" data-category="Cakes">
+					<div class="img-container">
+						<img src="./img/cake-1.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+					</div>
+					<div class="store-item-info">
+						<span class="name-item" data-name="Cake Item"></span>
+						<span class="price-item"data-price="$5"></span>
+					</div>
+				</div>
+
+				<div class="store-item" data-category="Doughnuts">
+					<div class="img-container">
+						<img src="./img/doughnut-1.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+					</div>
+					<div class="store-item-info">
+						<span class="name-item" data-name="Dougnut Item"></span>
+						<span class="price-item" data-price="$5"></span>
+					</div>
+				</div>
+				<div class="store-item" data-category="Sweets">
+					<div class="img-container">
+					<img src="./img/sweets-2.jpeg" alt="" class="store-img">
+					<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+					</div>
+					<div class="store-item-info">
+						<span class="name-item" data-name="Sweet Item"></span>
+						<span class="price-item" data-price="$10"></span>
+					</div>
+				</div>
+				<div class="store-item" data-category="Cupcakes">
+					<div class="img-container">
+						<img src="./img/cupcake-2.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+					</div>
+					<div class="store-item-info">
+						<span class="name-item" data-name="Cupcake Item"></span>
+						<span class="price-item" data-price="$5"></span>
+					</div>
+				</div>
+
+				<div class="store-item" data-category="Cakes">
+					<div class="img-container">
+						<img src="./img/cake-2.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+					</div>
+					<div class="store-item-info">
+						<span class="name-item" data-name="Cake Item"></span>
+						<span class="price-item" data-price="$10"></span>
+					</div>
+				</div>
+				<div class="store-item" data-category="Doughnuts">
+					<div class="img-container">
+						<img src="./img/doughnut-2.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+					</div>
+					<div class="store-item-info">
+						<span class="name-item" data-name="Dougnut Item"></span>
+						<span class="price-item" data-price="$10"></span>
+					</div>
+				</div>
+				<div class="store-item" data-category="Sweets">
+					<div class="img-container">
+						<img src="./img/sweets-3.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+					</div>
+					<div class="store-item-info">
+						<span class="name-item" data-name="Sweet Item"></span>
+						<span class="price-item"data-price="$15"></span>
+					</div>
+				</div>
+				<div class="store-item" data-category="Cupcakes">
+					<div class="img-container">
+						<img src="./img/cupcake-3.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+					</div>
+					<div class="store-item-info">
+						<span class="name-item" data-name="Cupcake Item"></span>
+						<span class="price-item" data-price="$15"></span>
+					</div>
+				</div>
+				<div class="store-item" data-category="Cakes">
+					<div class="img-container">
+						<img src="./img/cake-3.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+					</div>
+					<div class="store-item-info">
+						<span class="name-item" data-name="Cake Item"></span>
+						<span class="price-item" data-price="$15"></span>
+					</div>
+				</div>
+				<div class="store-item" data-category="Doughnuts">
+					<div class="img-container">
+						<img src="./img/doughnut-3.jpeg" alt="" class="store-img">
+						<span class="store-item-icon">
+                			<i class="fa fa-shopping-cart"></i>
+              			</span>
+              		</div>
+					<div class="store-item-info">
+						<span class="name-item" data-name="Dougnut Item"></span>
+						<span class="price-item" data-price="$15"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="container">
+		<div id="modal-bg">
+			<span id="modal-close"><i class="fa fa-times-circle"></i></span>
+			<div id="modal-item"></div>
+			<span class="modal-control" id="btnLeft"><i class="fa fa-caret-left"></i></span>
+			<span class="modal-control" id="btnRight"><i class="fa fa-caret-right"></i></span>
+		</div>
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>
