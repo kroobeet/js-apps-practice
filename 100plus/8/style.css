@@ -331,3 +331,77 @@ img {
     vertical-align: middle;
     border-style: none;
 }
+
+#container {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#modal-bg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.6) !important;
+}
+
+#modal-close {
+	position: absolute;
+	top: 0;
+	right: 10%;
+    color: #ef7998;
+    font-size: 3rem;
+    transition: all 1s ease-in-out;
+	cursor: pointer;
+}
+
+#modal-close:hover {
+	color: rgb(243, 167, 167);
+}
+
+#modal-item {
+	width: 80%;
+	min-height: 80vh;
+	border-radius: 0.3rem;
+}
+
+#btnLeft {
+    top: 50%;
+    left: 5%;
+    transform: translateX(-60%);
+}
+
+#btnRight {
+    top: 50%;
+    right: 5%;
+    transform: translateX(60%);
+}
+
+.modal-control {
+    position: absolute;
+    font-size: 4rem;
+    color: #ef7998;
+    transition: all 1s linear;
+	cursor: pointer;
+}
+
+.modal-control i {
+	transition: 1s;
+}
+
+.modal-control i:hover {
+	color: rgb(243, 167, 167);
+	transition: 1s;
+}

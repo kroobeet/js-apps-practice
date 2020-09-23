@@ -1,16 +1,19 @@
 var border = document.querySelector('#border');
-var image = document.querySelector('#main-image');
-image.onmousemove = move;
-image.onmouseout = out;
+var mainImage = document.querySelector('#main-image');
+mainImage.onmousemove = move;
+mainImage.onmouseout = out;
+// update ********
+function positionBorder(marginLeft,marginTop) {
+	border.style.marginLeft = marginLeft;
+	border.style.marginTop = marginTop;
+}
 function move() {
-	border.style.marginLeft = '-10px';
-	border.style.marginTop = '0px';
+	positionBorder('-10px','0px');
 }
-
 function out() {
-	border.style.marginLeft = '-55px';
-	border.style.marginTop = '-55px';
+	positionBorder('-55px','-55px');
 }
+// update ********
 
 var names = document.querySelectorAll('.name-item');
 var prices = document.querySelectorAll('.price-item');
@@ -71,3 +74,66 @@ function getProducts() {
 	var products = document.querySelectorAll('.store-item');
 	return products;
 }
+
+
+// modal window
+var src;
+var index = 0;
+
+var container = document.querySelector('#container');
+var modalItem = document.querySelector('#modal-item');
+
+var image = document.querySelectorAll('.store-img');
+
+var imagesArray = Object.values(image);
+
+for (var i = 0; i < image.length; i++) {
+	image[i].addEventListener('click', function (event) {
+		var tar = event.target;
+		src = tar.getAttribute('src');
+		container.style.display = 'flex';
+		modalItem.style.background = 'url("' + src + '")' + ' center/cover fixed no-repeat';
+		return src;
+	});
+}
+
+function getIndex() {
+	for (var i = 0; i < imagesArray.length; i++) {
+		var arrayImageSrc = imagesArray[i].getAttribute('src');
+		if (src == arrayImageSrc) {
+			index = i;
+			return index;
+		}
+	}
+}
+
+var prev = document.querySelector('#btnLeft').addEventListener('click', function () {
+	getIndex();
+	index--;
+	if (index >= 0) {
+		setStyle();
+	} else if (index < 0) {
+		index = imagesArray.length-1;
+		setStyle();
+	}
+});
+
+var next = document.querySelector('#btnRight').addEventListener('click', function () {
+	getIndex();
+	index++;
+	if (index == (imagesArray.length)) {
+		index = 0;
+		setStyle(index);
+	} else if (index < imagesArray.length) {
+		setStyle(index);
+	}
+});
+
+function setStyle () {
+	src = imagesArray[index].getAttribute('src');
+	modalItem.style.background = 'url("' + src + '")' + ' center/cover fixed no-repeat';
+}
+
+var close = document.querySelector('#modal-close').addEventListener('click', function () {
+	container.style.display = 'none';
+});
