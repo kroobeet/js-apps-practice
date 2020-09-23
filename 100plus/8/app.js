@@ -123,9 +123,9 @@ var next = document.querySelector('#btnRight').addEventListener('click', functio
 	index++;
 	if (index == (imagesArray.length)) {
 		index = 0;
-		setStyle(index);
+		setStyle();
 	} else if (index < imagesArray.length) {
-		setStyle(index);
+		setStyle();
 	}
 });
 
