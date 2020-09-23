@@ -61,7 +61,7 @@ function getProducts() {
 
 // фильтр по поиску (start)
 var searchItem = document.querySelector('#search-item');
-var changesInput = document.querySelector('#search-item').addEventListener('keyup', function () {
+var changesInput = searchItem.addEventListener('keyup', function () {
 	var inputValue = searchItem.value;
 	var products = getProducts();
 	for (var i = 0; i < names.length; i++) {
