@@ -2,18 +2,17 @@ var border = document.querySelector('#border');
 var mainImage = document.querySelector('#main-image');
 mainImage.onmousemove = move;
 mainImage.onmouseout = out;
-// update ********
-function positionBorder(marginLeft,marginTop) {
+function move() {
+	positionBorder('-10px', '0px');
+}
+function out() {
+	positionBorder('-55px', '-55px');
+}
+
+function positionBorder(marginLeft, marginTop) {
 	border.style.marginLeft = marginLeft;
 	border.style.marginTop = marginTop;
 }
-function move() {
-	positionBorder('-10px','0px');
-}
-function out() {
-	positionBorder('-55px','-55px');
-}
-// update ********
 
 var names = document.querySelectorAll('.name-item');
 var prices = document.querySelectorAll('.price-item');
@@ -59,9 +58,8 @@ function getProducts() {
 	return products;
 }
 
-// фильтр по поиску (start)
 var searchItem = document.querySelector('#search-item');
-var changesInput = searchItem.addEventListener('keyup', function () {
+var changeInput = searchItem.addEventListener('keyup', function () {
 	var inputValue = searchItem.value;
 	var products = getProducts();
 	for (var i = 0; i < names.length; i++) {
@@ -72,22 +70,19 @@ var changesInput = searchItem.addEventListener('keyup', function () {
 			products[i].style.display = 'none';
 		}
 	}
-});
-// фильтр по поиску (end)
+})
 
-// modal window
 var src;
 var index = 0;
 
 var container = document.querySelector('#container');
 var modalItem = document.querySelector('#modal-item');
 
-var image = document.querySelectorAll('.store-img');
+var images = document.querySelectorAll('.store-img');
+var imagesArray = Object.values(images);
 
-var imagesArray = Object.values(image);
-
-for (var i = 0; i < image.length; i++) {
-	image[i].addEventListener('click', function (event) {
+for (var i = 0; i < images.length; i++) {
+	images[i].addEventListener('click', function (event) {
 		var tar = event.target;
 		src = tar.getAttribute('src');
 		container.style.display = 'flex';
@@ -120,7 +115,7 @@ var prev = document.querySelector('#btnLeft').addEventListener('click', function
 var next = document.querySelector('#btnRight').addEventListener('click', function () {
 	getIndex();
 	index++;
-	if (index == (imagesArray.length)) {
+	if (index == imagesArray.length) {
 		index = 0;
 		setStyle();
 	} else if (index < imagesArray.length) {
