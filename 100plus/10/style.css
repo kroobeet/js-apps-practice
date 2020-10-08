@@ -1,0 +1,65 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.operation {
+    background-color: rgb(245,146,62);
+    color: white;
+}
+
+.buttons button {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    transition: 2s;
+    border: 1px solid black;
+}
+
+.buttons button:hover {
+    background-color: blue;
+    transition: 2s;
+    color: white;
+}
+
+#input {
+    font-size: 5rem;
+    padding: 5px;
+    background-color: rgb(41,41,56);
+    color: white;
+}
+
+#result {
+    background-color: green;
+}
+
+#result:hover {
+    background-color: blue;
+}
+
+#clear {
+    background-color: red;
+}
+
+#clear:hover {
+    background-color: blue;
+}
+
+.number {
+    background-color:rgb(224,224,224)
+}
